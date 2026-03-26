@@ -23,11 +23,9 @@ header {
 
 header h1 {
   font-size: 2.8em;
-  margin-bottom: 10px;
 }
 
 header p {
-  font-size: 1.2em;
   color: #8b949e;
 }
 
@@ -48,14 +46,14 @@ header p {
   transform: scale(1.05);
 }
 
-/* NAVBAR */
+/* NAV */
 nav {
   position: sticky;
   top: 0;
   background: #161b22;
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 25px;
   padding: 15px;
   border-bottom: 1px solid #30363d;
   z-index: 1000;
@@ -65,7 +63,6 @@ nav a {
   color: #c9d1d9;
   text-decoration: none;
   font-weight: bold;
-  transition: 0.3s;
 }
 
 nav a:hover {
@@ -81,19 +78,18 @@ section {
 
 h2 {
   margin-bottom: 20px;
-  font-size: 2em;
   border-left: 4px solid #238636;
   padding-left: 10px;
 }
 
-/* PROJECT CARDS */
+/* PROJECTS */
 .project {
   background: #161b22;
   padding: 20px;
   margin: 20px 0;
   border-radius: 10px;
-  transition: 0.3s;
   border: 1px solid #30363d;
+  transition: 0.3s;
 }
 
 .project:hover {
@@ -101,28 +97,33 @@ h2 {
   border-color: #58a6ff;
 }
 
-.project h3 {
-  margin-bottom: 10px;
+/* SKILLS */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-.project p {
-  margin-bottom: 10px;
+.skills-container span {
+  background: #161b22;
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: 1px solid #30363d;
+  transition: 0.3s;
+}
+
+.skills-container span:hover {
+  background: #238636;
+}
+
+/* HIRE */
+#hire {
+  text-align: center;
+}
+
+#hire p {
+  margin-bottom: 20px;
   color: #8b949e;
-}
-
-.project a {
-  color: #58a6ff;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.project a:hover {
-  text-decoration: underline;
-}
-
-/* CONTACT LINKS */
-#contact a {
-  color: #58a6ff;
 }
 
 /* FOOTER */
@@ -130,6 +131,18 @@ footer {
   text-align: center;
   padding: 20px;
   background: #161b22;
-  border-top: 1px solid #30363d;
   color: #8b949e;
+}
+
+/* WHATSAPP */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  color: white;
+  font-size: 24px;
+  padding: 15px;
+  border-radius: 50%;
+  text-decoration: none;
 }
