@@ -1,16 +1,13 @@
-/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* BODY */
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: Arial, sans-serif;
   background: #0d1117;
   color: #c9d1d9;
-  line-height: 1.6;
   scroll-behavior: smooth;
 }
 
@@ -25,10 +22,6 @@ header h1 {
   font-size: 2.8em;
 }
 
-header p {
-  color: #8b949e;
-}
-
 /* BUTTON */
 .btn {
   display: inline-block;
@@ -38,12 +31,10 @@ header p {
   color: white;
   text-decoration: none;
   border-radius: 6px;
-  transition: 0.3s;
 }
 
 .btn:hover {
   background: #2ea043;
-  transform: scale(1.05);
 }
 
 /* NAV */
@@ -53,16 +44,13 @@ nav {
   background: #161b22;
   display: flex;
   justify-content: center;
-  gap: 25px;
+  gap: 20px;
   padding: 15px;
-  border-bottom: 1px solid #30363d;
-  z-index: 1000;
 }
 
 nav a {
   color: #c9d1d9;
   text-decoration: none;
-  font-weight: bold;
 }
 
 nav a:hover {
@@ -76,62 +64,27 @@ section {
   padding: 60px 20px;
 }
 
-h2 {
-  margin-bottom: 20px;
-  border-left: 4px solid #238636;
-  padding-left: 10px;
-}
-
 /* PROJECTS */
 .project {
   background: #161b22;
   padding: 20px;
   margin: 20px 0;
   border-radius: 10px;
-  border: 1px solid #30363d;
-  transition: 0.3s;
 }
 
-.project:hover {
-  transform: translateY(-5px);
-  border-color: #58a6ff;
+.project img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
 /* SKILLS */
-.skills-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
 .skills-container span {
+  display: inline-block;
   background: #161b22;
-  padding: 10px 15px;
+  margin: 5px;
+  padding: 10px;
   border-radius: 20px;
-  border: 1px solid #30363d;
-  transition: 0.3s;
-}
-
-.skills-container span:hover {
-  background: #238636;
-}
-
-/* HIRE */
-#hire {
-  text-align: center;
-}
-
-#hire p {
-  margin-bottom: 20px;
-  color: #8b949e;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #161b22;
-  color: #8b949e;
 }
 
 /* WHATSAPP */
@@ -140,9 +93,7 @@ footer {
   bottom: 20px;
   right: 20px;
   background: #25d366;
-  color: white;
-  font-size: 24px;
   padding: 15px;
   border-radius: 50%;
-  text-decoration: none;
+  color: white;
 }
