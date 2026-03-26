@@ -1,22 +1,22 @@
-// SCROLL ANIMATION
-const sections = document.querySelectorAll("section");
+// TYPING EFFECT
+const text = ["Full-Stack Developer", "React Developer", "Backend Developer"];
+let i = 0, j = 0, currentText = "", isDeleting = false;
 
-window.addEventListener("scroll", () => {
-  let scrollY = window.pageYOffset;
+function type() {
+  if (!isDeleting && j <= text[i].length) {
+    currentText = text[i].substring(0, j++);
+  } else if (isDeleting && j >= 0) {
+    currentText = text[i].substring(0, j--);
+  }
 
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop - 200;
+  document.getElementById("typing").innerHTML = currentText;
 
-    if (scrollY > sectionTop) {
-      section.style.opacity = 1;
-      section.style.transform = "translateY(0)";
-    }
-  });
-});
+  if (j === text[i].length) isDeleting = true;
+  if (j === 0) {
+    isDeleting = false;
+    i = (i + 1) % text.length;
+  }
 
-// INITIAL STATE
-sections.forEach(section => {
-  section.style.opacity = 0;
-  section.style.transform = "translateY(50px)";
-  section.style.transition = "all 0.6s ease";
-});
+  setTimeout(type, isDeleting ? 50 : 100);
+}
+type();
